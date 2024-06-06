@@ -1,0 +1,16 @@
+{
+    "PrimaryZipCode":"99517",
+    "IAmJoin":"A provider applying under a SSN or TaxID/EIN that is currently participating with Aetna",
+    "Situation":"I want to be contracted in the state selected below",
+    "EXT":"4554",
+    "TaxIDSelection":"E - Employer identification number",
+    "State":"Connecticut",
+    "PZipCode":"06010",
+    "TIDName":"Robert",
+    "TaxID":"123456785",
+    "VerifyTaxID":"123456785",
+    "PLastName":"Jordan",
+    "PFirstName":"Chris",
+    "IndividualNPI":"1122334456"
+  }
+  

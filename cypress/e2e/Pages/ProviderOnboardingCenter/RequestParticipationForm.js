@@ -1,0 +1,57 @@
+
+const SubmitterInformation= require('../../Locators/RequestParticipation.json')
+export class ReqParticipationForm{
+   LastName(LName){
+        cy.xpath(SubmitterInformation.RequestForParticipation.LastName).scrollIntoView().type(LName)
+        cy.wait(200)     
+    }
+    FirstName(FirstName){
+        cy.xpath(SubmitterInformation.RequestForParticipation.FirstName).scrollIntoView().type(FirstName)
+        cy.wait(200)     
+    }
+    Role(roleSelection){
+        cy.xpath(SubmitterInformation.RequestForParticipation.Role).scrollIntoView().select(roleSelection)
+        cy.wait(400)     
+    }
+    SubmitterEmail(SubmitterEmail){
+        cy.xpath(SubmitterInformation.RequestForParticipation.SubmitterEmail).scrollIntoView().type(SubmitterEmail)
+        cy.wait(1000) 
+    }
+    VerifyEmail(VerifyEmail){
+        cy.xpath(SubmitterInformation.RequestForParticipation.VerifyEmail).scrollIntoView().type(VerifyEmail)
+        cy.wait(1000) 
+    }
+    phoneNumber(PhoneNumber){
+        cy.xpath(SubmitterInformation.RequestForParticipation.phoneNumber).type(PhoneNumber)
+        cy.wait(300) 
+    }
+    ext(EXT){
+        cy.xpath(SubmitterInformation.RequestForParticipation.EXT).type(EXT)
+        cy.wait(200) 
+    }
+    faxNumber(FaxNumber){
+        cy.xpath(SubmitterInformation.RequestForParticipation.faxNumber).type(FaxNumber)
+        cy.wait(200) 
+    }
+    providerNPINumber(IndividualNPI){
+        cy.xpath(SubmitterInformation.RequestForParticipation.IndividualTypeNPI).type(IndividualNPI)
+        cy.wait(200) 
+    }
+    emailAcknowledgement(){
+        cy.xpath(SubmitterInformation.RequestForParticipation.EmailAcknowledgement).click()
+        cy.wait(200) 
+    }
+    Agree(){
+        cy.xpath(SubmitterInformation.RequestForParticipation.Agree).click()
+        cy.wait(200) 
+    }
+    agreeCheckbox(){
+        cy.xpath(SubmitterInformation.RequestForParticipation.checkboxIAgree).click()
+        cy.wait(200) 
+    }
+    Continue(){
+        cy.xpath(SubmitterInformation.RequestForParticipation.Continue).click()
+        cy.wait(200) 
+    }
+    
+}

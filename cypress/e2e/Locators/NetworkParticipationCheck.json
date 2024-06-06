@@ -1,0 +1,24 @@
+{
+    "NetworkParticipation":{
+        "yes":"//label[@for='Yes-input']//span[@class='mat-radio-outer-circle']",
+        "no":"//label[@for='No-input']//span[@class='mat-radio-outer-circle']",
+        "VirtualCare":"//label[@for='Virtual-input']//span[@class='mat-radio-outer-circle']",
+        "HybridServices":"//label[@for='Hybrid-input']//span[@class='mat-radio-outer-circle']",
+        "networkJoining":"//select[@id='networkJoining']",
+        "state":"//select[@id='applicableSituation']",
+        "zipCode":"//input[@id='zipCode']",
+        "ext":"//input[@id='ext']]",
+        "TaxAndType":"//select[@id='taxIdType']",
+        "taxID":"//input[@id='taxId']",
+        "verifyTaxID":"//input[@id='verifyTaxID']",
+        "practLastName":"//input[@id='practLastName']",
+        "practFirstName":"//input[@id='practFirstName']",
+        "npi":"//input[@id='npi']",
+        "checkboxIAgree":"//input[@id='checkboxSelect']",
+        "continueButton":"//button[normalize-space()='Continue']",
+        "goBack":"//button[normalize-space()='Go Back']",
+        "exitButton":"//button[normalize-space()='Exit']",
+        "continueSession":"//button[normalize-space()='Continue Session']",
+        "exitSession":"//button[normalize-space()='Exit Session']"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "RequestForParticipation":{
+        "LastName":"//input[@id='lastName']",
+        "FirstName":"//input[@id='firstName']",
+        "Role":"//select[@id='role']",
+        "SubmitterEmail":"//input[@id='email']",
+        "VerifyEmail":"//input[@id='verifyEmail']",
+        "phoneNumber":"//input[@id='phoneNumber']",
+        "EXT":"//input[@id='ext']",
+        "faxNumber":"//input[@id='faxNumber']",   
+        "IndividualTypeNPI":"//input[@id='npi']",
+        "EmailAcknowledgement":"//a[normalize-space()='EMAIL ACKNOWLEDGEMENT']",
+        "Agree":"//label[@for='agree-input']//span[@class='mat-radio-label-content']",
+        "Disagree":"//label[@for='disagree-input']//span[@class='mat-radio-label-content']",
+        "GoBack":"//button[@class='primary-button float-right']",
+        "IDisagree":"//button[normalize-space()='I Disagree']",
+        "checkboxIAgree":"//input[@id='checkboxSelect']",
+        "Continue":"//button[normalize-space()='Continue']",
+        "goBack":"//button[normalize-space()='Go Back']"     
+
+    }
+}

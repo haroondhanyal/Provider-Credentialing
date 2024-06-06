@@ -1,0 +1,10 @@
+{
+    "SignIn":{
+        "UserName":"//input[@id='UserName']",
+        "Password":"//input[@id='Password']",
+        "RememberMe":"//input[@id='RememberMe']",
+        "SignButton":"//button[normalize-space()='Sign In']"
+        
+        
+    }
+}

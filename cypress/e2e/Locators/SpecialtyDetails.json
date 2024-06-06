@@ -1,0 +1,15 @@
+{
+    "SpecialtyDetails":{
+        "DegreeType":"//select[@id='degreeType']",
+        "PrimarySpecialty":"//select[@id='specialty']",
+        "BehavioralHealthManual":"//a[normalize-space()='Behavioral Health Provider Manual']",
+        "Agree":"//label[@for='agree-input']//span[@class='mat-radio-label-content']",
+        "AgreeCheckbox":"//input[@id='checkboxSelect']",
+        "goBack":"//button[normalize-space()='Go Back']",
+        "SaveAndExit":"//button[normalize-space()='Save & Exit']",
+        "ContinueBtn":"//button[normalize-space()='Continue']",
+        "AcknowledgeAndContinue":"//button[normalize-space()='Acknowledge and Continue']",
+        "GoToProView":"//button[normalize-space()='Go to CAQH ProView']"
+        
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "ProviderOnboarding":{
+        "JoinNetwork":"//a[@aria-label='join the network']",
+        "IamInterested":"//select[@id='typeOfRFP']",
+        "IamApplying":"//select[@id='typeOfRFP1']",
+        "IamJoining":"//select[@id='typeOfRFP2']",
+        "ContinueBtn":"//button[normalize-space()='Continue']"
+    }
+}

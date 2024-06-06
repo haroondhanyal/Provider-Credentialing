@@ -1,0 +1,16 @@
+{
+    "PractitionerInformation":{
+        "MiddleInitial":"//input[@id='middleInitial']",
+        "dob":"//input[@id='dob']",
+        "selectState":"//select[@id='state']",
+        "medicalLicenseNumber":"//input[@id='medicalLicenseNumber']",
+        "medicalLicenseExpiry":"//input[@id='medLicenseExpDate']",
+        "websiteURL":"#providerURL]",
+        "Yes":"#Yes > .mat-radio-label > .mat-radio-container > .mat-radio-outer-circle",
+        "ContinueButton":"//button[normalize-space()='Continue']"
+
+
+        
+        
+    }
+}
