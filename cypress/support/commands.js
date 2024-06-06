@@ -25,6 +25,14 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import 'cypress-xpath';
 import 'cypress-file-upload';
+/// <reference types="Cypress"/>
+Cypress.Commands.add('visitUrl', (urlKey) => {
+    const baseUrl = Cypress.env(urlKey);
+    if (!baseUrl) {
+      throw new Error(`No URL defined for key: ${urlKey}`);
+    }
+    cy.visit(baseUrl);
+  });
 // Cypress.Commands.add('clickMultipleXPaths', (xpaths) => {
 //     xpaths.forEach((xpath) => {
 //       cy.xpath(xpath).click();

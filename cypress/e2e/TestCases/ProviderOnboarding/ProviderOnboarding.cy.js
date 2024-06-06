@@ -1,5 +1,3 @@
-/// <reference types="Cypress"/>
-
 import { RequestParticipation } from "../../Pages/ProviderOnboardingCenter/RequestParticipation"; 
 import { ReqParticipationForm } from "../../Pages/ProviderOnboardingCenter/RequestParticipationForm";
 import { NetworkParticipationCheck } from "../../Pages/ProviderOnboardingCenter/NetworkParticipationCheck";
@@ -196,4 +194,3 @@ describe('Request Aetna Website visit', () => {
     // });
     
 });
-9

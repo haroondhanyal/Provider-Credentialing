@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  "projectId": "Provider Onboarding",
+  "projectId": 'sjnqhg',
   "viewportWidth": 1280,
   "viewportHeight": 800,
   e2e: {
@@ -18,7 +18,11 @@ module.exports = defineConfig({
     pageLoadTimeout:30000 ,
     screenshots: true,
   
-    screenshotOnRunFailure: true
+    screenshotOnRunFailure: true,
+    env: {
+      baseURL1: 'https://extaz-oci.aetna.com/pocui/',
+      baseURL2: 'https://proview.caqh.org/Login?Type=PR',
+    },
     // // reporter: 'cypress-multi-reporters',
     // // reporterOptions: {
     // //   reporterEnabled: 'mochawesome',

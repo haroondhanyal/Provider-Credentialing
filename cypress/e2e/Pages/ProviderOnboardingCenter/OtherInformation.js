@@ -45,7 +45,7 @@ export class OtherInformation{
 //     }
 Attachments() {
     // const filePath = 'C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf'; 
-    cy.get('.paper_clip_style').attachFile({filePath:'C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf',fileName:'TCSFile.pdf'});
+    cy.get('.paper_clip_style').attachFile({filePath:'C:\\Insight-Technology-Projects\\provider-credentialing-poc\\cypress-scripts\\cypress\\e2e\\fixtures\\TCS.pdf',fileName:'TCSFile.pdf'});
 
     cy.wait(800); 
     return this; 
