@@ -1,4 +1,7 @@
 const { defineConfig } = require("cypress");
+const fs = require('fs-extra');
+const path = require('path');
+
 
 module.exports = defineConfig({
   "projectId": 'sjnqhg',
@@ -6,6 +9,23 @@ module.exports = defineConfig({
   "viewportHeight": 800,
   e2e: {
     setupNodeEvents(on, config) {
+      on('task', {
+        clearDownloads() {
+          const downloadsFolder = path.join(__dirname, 'cypress', 'downloads');
+
+          return fs.emptyDir(downloadsFolder)
+            .then(() => {
+              console.log('Download folder cleared');
+              return null;
+            })
+            .catch(err => {
+              console.error('Error clearing download folder:', err);
+              throw err;
+            });
+        }
+      });
+
+      return config;
       // implement node event listeners here
      
     },

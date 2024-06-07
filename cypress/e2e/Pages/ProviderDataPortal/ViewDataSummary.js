@@ -8,8 +8,9 @@ export class ViewDataSummary{
     }
     SaveButton(){
         // cy.xpath("//button[@value='Save']").click({ timeout: 800000 })
-        cy.xpath("//button[@value='Save']").click()
-        cy.wait(2000)
+        //cy.xpath("//button[@value='Save']").click()
+        cy.get('[onclick="return OnSave();"]').click()
+        cy.wait(50000)
         return
     }
 }

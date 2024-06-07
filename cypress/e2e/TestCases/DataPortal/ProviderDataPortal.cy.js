@@ -14,33 +14,50 @@ describe("Provider Data Portal", () => {
   });
 
   beforeEach(() => {
-    try {
-        cy.visit("https://proview.caqh.org/Login?Type=PR");
-        cy.fixture('SignIn').then((data) => {
-          SignInPortal.UserName(data.UserName);
-          SignInPortal.Password(data.Password);
-          SignInPortal.RememberMeCheckBox();
-          SignInPortal.SignInButton();
-        });
-      } catch (error) {
-        // Handle login error
-        cy.log("Login failed: " + error.message);
-      }
+    cy.visit("https://proview.caqh.org/Login?Type=PR");
+  });
+  afterEach(() => {
+    // Stop the test run if any test case fails
+    cy.on('fail', (error, runnable) => {
+      throw error;
+    });
+  });
+
+  it("Invalid Login", () => {
+    cy.fixture('InValidLogin').then((data) => {
+      SignInPortal.UserName(data.UserName);
+      SignInPortal.Password(data.Password);
+      SignInPortal.RememberMeCheckBox();
+      SignInPortal.SignInButton();
     });
 
-
-
-  it("Download State Application", () => {
-    DownloadState.SelectState();
-    DownloadState.StateSelection();
-    DownloadState.StateSelected();
-    DownloadState.IncludeAllDocument();
-    DownloadState.downloadButton();
+    // Verify that an error message is displayed
+    cy.get('.error-message-selector').should('be.visible').and('contain', 'Invalid username or password');
   });
+
+  context("Valid Login Actions", () => {
+    beforeEach(() => {
+      cy.fixture('SignIn').then((data) => {
+        SignInPortal.UserName(data.UserName);
+        SignInPortal.Password(data.Password);
+        SignInPortal.RememberMeCheckBox();
+        // SignInPortal.SignInButton();
+      });
+    });
+
+    it("Download State Application", () => {
+      DownloadState.SelectState();
+      DownloadState.StateSelection();
+      DownloadState.StateSelected();
+      DownloadState.IncludeAllDocument();
+      DownloadState.downloadButton();
+    });
+
     it("View Data Summary Report", () => {
-    ViewSummary.ViewData();
-    ViewSummary.SaveButton();
-    ViewSummary.ViewData();
-    ViewSummary.SaveButton();
+      ViewSummary.ViewData();
+      ViewSummary.SaveButton();
+      ViewSummary.ViewData();
+      ViewSummary.SaveButton();
+    });
   });
 });
