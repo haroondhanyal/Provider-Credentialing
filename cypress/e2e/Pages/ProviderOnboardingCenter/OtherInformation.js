@@ -43,29 +43,16 @@ export class OtherInformation{
 //         .wait(800); // Wait for 800 milliseconds
 //     return;
 //     }
-Attachments() {
+    Attachments() {
     // const filePath = 'C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf'; 
-    cy.get('.paper_clip_style').attachFile({filePath:'C:\\Insight-Technology-Projects\\provider-credentialing-poc\\cypress-scripts\\cypress\\e2e\\fixtures\\TCS.pdf',fileName:'TCSFile.pdf'});
-
-    cy.wait(800); 
+    //cy.xpath("//img[@alt='Attachments icon Required']")
+    cy.get('.paper_clip_style').selectFile({
+        contents:'C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf',
+        mimeType:'application/pdf',
+    
+    })
     return this; 
-  }
-    // Attachments() {
-       
-    //     const filePath = 'C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf'; 
-    
-    //     // Use the fixture to attach the file
-    //     cy.fixture(filePath).then(fileContent => {
-    //       cy.get('.paper_clip_style').attachFile({
-    //         fileContent: fileContent,
-    //         fileName: filePath,
-    //         mimeType: 'application/pdf' // Specify the correct MIME type
-    //       });
-    //     });
-    
-    //     cy.wait(800); // Wait for any required time after attaching
-    //     return this; // Returning `this` allows chaining of methods if needed
-    // }
+    }
 
     ContinueButton(){
         cy.xpath("//button[normalize-space()='Continue']").click()

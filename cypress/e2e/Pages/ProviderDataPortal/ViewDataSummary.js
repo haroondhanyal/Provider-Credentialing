@@ -4,13 +4,14 @@ export class ViewDataSummary{
     ViewData(){
 
         cy.get('#DAMenu tr td:nth-child(2) a').invoke('removeAttr', 'target').click()
-        cy.wait(300)
+        // cy.get(':nth-child(2) > a > .thumbnail').invoke('removeAttr', 'target').click()
+        cy.wait(5000)
     }
     SaveButton(){
         // cy.xpath("//button[@value='Save']").click({ timeout: 800000 })
         //cy.xpath("//button[@value='Save']").click()
         cy.get('[onclick="return OnSave();"]').click()
-        cy.wait(50000)
+        // cy.wait(50000)
         return
     }
 }

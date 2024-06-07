@@ -4,7 +4,7 @@ export class DownloadStateApplication{
     SelectState(){
 
         //cy.get('#DAMenu tr td:nth-child(3) a').click()
-        cy.get('.form-main').click()
+        cy.get('#StateApplicationMenu').click()
         cy.wait(300)
     }
     StateSelection(){
