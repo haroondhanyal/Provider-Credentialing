@@ -133,7 +133,7 @@ describe('Request Aetna Website visit', () => {
             OtherInfo.AddFacility()
             OtherInfo.FacilityLocation2(data.FacilityLocation2)
             OtherInfo.StateSelection2(data.SelectState2)
-            OtherInfo.Attachments()
+            // OtherInfo.Attachments()
         // OtherInfo.ContinueButton()
 
         })

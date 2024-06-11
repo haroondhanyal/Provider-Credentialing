@@ -182,7 +182,7 @@ describe("Provider Data Portal", () => {
      ViewSummary.SaveButton();
     });
   });
-  it.only("Invalid Credentials ",()=>{
+  it("Invalid Credentials ",()=>{
     cy.visit("https://proview.caqh.org/Login?Type=PR");
     cy.fixture('InvalidLogin').then((data)=>{
       SignInPortal.UserName(data.UserName)

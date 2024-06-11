@@ -19,6 +19,13 @@ require('cypress-xpath')
 before(() => {
     cy.task('clearDownloads');
   });
+  afterEach(() => {
+    const testState = Cypress.mocha.getRunner().test.state;
+    if (testState === 'passed') {
+      cy.screenshot('passed-tests/' + Cypress.currentTest.title, { capture: 'viewport' });
+    }
+  });
+  
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
