@@ -35,25 +35,22 @@ export class OtherInformation{
         cy.wait(200) 
 
     }
-//  Attachments(){
-//         const filePath = 'cypress/e2e/fixtures/pic.png';
-//     cy.get('.paper_clip_style')
-//         .attachFile(filePath) // Attach the file
-//         .click() // Click the element
-//         .wait(800); // Wait for 800 milliseconds
-//     return;
-//     }
     Attachments() {
-    // const filePath = 'C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf'; 
-    //cy.xpath("//img[@alt='Attachments icon Required']")
-    cy.get('.paper_clip_style').selectFile({
-        contents:'C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf',
-        mimeType:'application/pdf',
+        // i used this , as OS by default dialog box appears but here i am not opening that .
+        cy.get('input[type="file"]').then($input => {
+            const stub = cy.stub($input[0], 'click').as('fileInputClick');
+        });
+        // here it i am attached the file  the file .
+        cy.get('.paper_clip_style').click();
     
-    })
-    return this; 
-    }
-
+        cy.get('input[type="file"]').selectFile('C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf', {
+          action: 'select'
+        });
+        cy.log('File attached successfully.');
+    
+        return this;
+      }
+    
     ContinueButton(){
         cy.xpath("//button[normalize-space()='Continue']").click()
         cy.wait(800)

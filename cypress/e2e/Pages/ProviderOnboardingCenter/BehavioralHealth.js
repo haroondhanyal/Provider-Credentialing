@@ -99,23 +99,24 @@ export class BehavioralHealth{
     // }
     AddictionSpecialist(){
         cy.xpath("//span[normalize-space()='Addiction Specialist']").click()
-        cy.wait(100)
+        cy.wait(300)
     }
     GenderIdentity(){
         cy.xpath("//span[normalize-space()='Gender Identity']").click()
-        cy.wait(100)
+        cy.wait(300)
     }
     LifeManagement(){
         cy.xpath("//span[normalize-space()='Life Management Counseling']").click()
-        cy.wait(100)
+        cy.wait(300)
     }
     HIV(){
         cy.xpath("//span[normalize-space()='HIV / AIDS']").click()
-        cy.wait(100)
+        cy.wait(300)
     }
     MedicationTreatment(){
         cy.xpath("//span[normalize-space()='MAT (Medication assisted treatment)']").click()
-        cy.wait(100)
+        cy.wait(300)
+        cy.get('body').click(0, 0);
     }
     // ContinueButton(){
     //     cy.xpath("//button[normalize-space()='Continue']").click()

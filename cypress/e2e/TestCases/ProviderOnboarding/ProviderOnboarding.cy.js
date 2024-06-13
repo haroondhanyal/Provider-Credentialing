@@ -133,64 +133,53 @@ describe('Request Aetna Website visit', () => {
             OtherInfo.AddFacility()
             OtherInfo.FacilityLocation2(data.FacilityLocation2)
             OtherInfo.StateSelection2(data.SelectState2)
-            // OtherInfo.Attachments()
-        // OtherInfo.ContinueButton()
+            OtherInfo.Attachments()
+            cy.get('input[type="file"]').then($input => {
+                const files = $input[0].files;
+                const message = files.length > 0 ? 'File is attached.' : 'W-9 Form to be attached is not attached ';
+                cy.log(message);
+                expect(files.length).to.be.at.least(0, 'Expected W-9 Form to be attached'); 
+            });
+            
+            
+            
+            // cy.get('input[type="file"]').then($input => {
+            //     const files = $input[0].files;
+            //     if (files.length > 0) {
+            //         // Assertion: File is attached 
+            //         cy.log('File is attached.');
+            //         expect(files.length).to.be.greaterThan(0,'Expected at least one file to be attached.')
+            //     } else {
+            //         // Assertion: File is not attached
+            //         cy.log('File is not attached.');
+            //         expect(files.length).to.equal(0,'Expected no files to be attached.');
+            //     }
+            // });
+            
+                
+            OtherInfo.ContinueButton()
 
         })
         
-        // const filePath='C:/Users/Thinkpad/Downloads/Downloads/Student.pdf';
-        // const filePath='C:/Insight-Technology-Projects/Provider-Credentialing/cypress/e2e/fixtures/TCS.pdf';
-        // const cssSelector='.paper_clip_style';
-        // OtherInfo.Attachments(cssSelector,filePath)
-        // cy.fixture('cypress/e2e/fixtures/pic.png', 'base64').then((fileContent) => {
-           
-        //     OtherInfo.Attachments({
-        //       force: true
-        //     });
-          
-        //  cy.get("img[alt='Attachments icon Required']").invoke('attr', 'src', 'data:image/png;base64,' + fileContent);
-        //   });
-        
-        
-        // BehaviorHealth.infants()
-        // BehaviorHealth.elementary()
-        // BehaviorHealth.Adolescents()
-        // BehaviorHealth.Seniors()
-        // BehaviorHealth.HaveAccommodations()
-        // BehaviorHealth.MedicareCertified()
-        // BehaviorHealth.MedicadCertified()
-        // BehaviorHealth.AetnaProgram()
-        // BehaviorHealth.AmericanSignal()
-        // BehaviorHealth.ArabicLanguage()
-        // BehaviorHealth.SpanishLanguage()
-        // BehaviorHealth.UrduLanguage()
-        // BehaviorHealth.ProviderPracticeFocus()
-        // BehaviorHealth.AddictionSpecialist()
-        // BehaviorHealth.GenderIdentity()
-        // BehaviorHealth.LifeManagement()
-        // BehaviorHealth.HIV()
-        // BehaviorHealth.MedicationTreatment()
-        
-
-
-        
-
-        
-        
+        BehaviorHealth.infants()
+        BehaviorHealth.elementary()
+        BehaviorHealth.Adolescents()
+        BehaviorHealth.Seniors()
+        BehaviorHealth.HaveAccommodations()
+        BehaviorHealth.MedicareCertified()
+        BehaviorHealth.MedicadCertified()
+        BehaviorHealth.AetnaProgram()
+        BehaviorHealth.AmericanSignal()
+        BehaviorHealth.ArabicLanguage()
+        BehaviorHealth.SpanishLanguage()
+        BehaviorHealth.UrduLanguage()
+        BehaviorHealth.ProviderPracticeFocus()
+        BehaviorHealth.AddictionSpecialist()
+        BehaviorHealth.GenderIdentity()
+        BehaviorHealth.LifeManagement()
+        BehaviorHealth.HIV()
+        BehaviorHealth.MedicationTreatment()
+            
     });
-    // it('Submitter Information with first fixture', function() {
-    //     // Access the state from the previous test
-    //     cy.fixture('Request').then((data) => {
-    //         SubmitterInformationForm.LastName(data.LastName);
-    //         SubmitterInformationForm.FirstName(data.FirstName);
-    //         SubmitterInformationForm.Role();
-    //         SubmitterInformationForm.SubmitterEmail(data.SubmitterEmail);
-    //         SubmitterInformationForm.VerifyEmail(data.VerifyEmail);
-    //         SubmitterInformationForm.phoneNumber(data.PhoneNumber);
-    //         SubmitterInformationForm.ext(data.EXT);
-    //         SubmitterInformationForm.faxNumber(data.FaxNumber);
-    //         SubmitterInformationForm.providerNPINumber(data.IndividualNPI);
-    //     });
-    // });
-    
+
 });

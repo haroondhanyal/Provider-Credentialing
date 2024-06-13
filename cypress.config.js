@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 const fs = require('fs-extra');
 const path = require('path');
 
@@ -22,8 +23,11 @@ module.exports = defineConfig({
               console.error('Error clearing download folder:', err);
               throw err;
             });
-        }
+        },
+        
       });
+      allureWriter(on, config);
+      return config;
 
       return config;
       // implement node event listeners here
@@ -35,7 +39,7 @@ module.exports = defineConfig({
     videosFolder: 'cypress/e2e/videos',
     screenshotsFolder: 'cypress/e2e/screenshots',
   
-    // pageLoadTimeout:60000 ,
+    pageLoadTimeout:60000 ,
     screenshots: true,
   
     screenshotOnRunFailure: true,
@@ -43,15 +47,6 @@ module.exports = defineConfig({
       baseURL1: 'https://extaz-oci.aetna.com/pocui/',
       baseURL2: 'https://proview.caqh.org/Login?Type=PR',
     },
-    // // reporter: 'cypress-multi-reporters',
-    // // reporterOptions: {
-    // //   reporterEnabled: 'mochawesome',
-    // //   mochawesomeReporterOptions: {
-    // //     reportDir: 'cypress/reports/mochawesome/testresults',
-    // //     overwrite: false,
-    // //     html: false,
-    // //     json: false
-    //   },
     },
   },
 );
