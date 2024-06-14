@@ -1,0 +1,123 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1718359703307' stop='1718359788098'>
+    <name>Provider Data Portal</name>
+    <title>Provider Data Portal</title>
+    <test-cases>
+        <test-case start='1718359703307' status='broken' stop='1718359745676'>
+            <name>Login</name>
+            <title>Login</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>`cy.visit()` failed trying to load:
+                
+                https://proview.caqh.org/Login?Type=PR
+                
+                We attempted to make an http request to this URL but the request failed without a response.
+                
+                We received this error at the network level:
+                
+                  > Error: connect ETIMEDOUT 52.191.237.70:443
+                
+                Common situations why this would fail:
+                  - you don't have internet access
+                  - you forgot to run / boot your web server
+                  - your web server isn't accessible
+                  - you have weird network configuration settings on your computer</message>
+                <stack-trace>CypressError: `cy.visit()` failed trying to load:
+                
+                https://proview.caqh.org/Login?Type=PR
+                
+                We attempted to make an http request to this URL but the request failed without a response.
+                
+                We received this error at the network level:
+                
+                  > Error: connect ETIMEDOUT 52.191.237.70:443
+                
+                Common situations why this would fail:
+                  - you don't have internet access
+                  - you forgot to run / boot your web server
+                  - your web server isn't accessible
+                  - you have weird network configuration settings on your computer
+                    at &lt;unknown> (http://localhost:54917/__cypress/runner/cypress_runner.js:131491:74)
+                    at visitFailedByErr (http://localhost:54917/__cypress/runner/cypress_runner.js:130889:12)
+                    at &lt;unknown> (http://localhost:54917/__cypress/runner/cypress_runner.js:131490:11)
+                    at tryCatcher (http://localhost:54917/__cypress/runner/cypress_runner.js:1807:23)
+                    at Promise._settlePromiseFromHandler (http://localhost:54917/__cypress/runner/cypress_runner.js:1519:31)
+                    at Promise._settlePromise (http://localhost:54917/__cypress/runner/cypress_runner.js:1576:18)
+                    at Promise._settlePromise0 (http://localhost:54917/__cypress/runner/cypress_runner.js:1621:10)
+                    at Promise._settlePromises (http://localhost:54917/__cypress/runner/cypress_runner.js:1697:18)
+                    at _drainQueueStep (http://localhost:54917/__cypress/runner/cypress_runner.js:2407:12)
+                    at _drainQueue (http://localhost:54917/__cypress/runner/cypress_runner.js:2400:9)
+                    at Async._drainQueues (http://localhost:54917/__cypress/runner/cypress_runner.js:2416:5)
+                    at Async.drainQueues (http://localhost:54917/__cypress/runner/cypress_runner.js:2286:14)
+                From Your Spec Code:
+                    at Context.eval (webpack://provider-credentialing/./cypress/e2e/TestCases/DataPortal/ProviderDataPortal.cy.js:162:7)
+                
+                From Node.js Internals:
+                  Error: connect ETIMEDOUT 52.191.237.70:443
+                      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1718359745718' status='broken' stop='1718359788077'>
+            <name>Invalid Credentials </name>
+            <title>Invalid Credentials </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>`cy.visit()` failed trying to load:
+                
+                https://proview.caqh.org/Login?Type=PR
+                
+                We attempted to make an http request to this URL but the request failed without a response.
+                
+                We received this error at the network level:
+                
+                  > Error: connect ETIMEDOUT 52.191.237.70:443
+                
+                Common situations why this would fail:
+                  - you don't have internet access
+                  - you forgot to run / boot your web server
+                  - your web server isn't accessible
+                  - you have weird network configuration settings on your computer</message>
+                <stack-trace>CypressError: `cy.visit()` failed trying to load:
+                
+                https://proview.caqh.org/Login?Type=PR
+                
+                We attempted to make an http request to this URL but the request failed without a response.
+                
+                We received this error at the network level:
+                
+                  > Error: connect ETIMEDOUT 52.191.237.70:443
+                
+                Common situations why this would fail:
+                  - you don't have internet access
+                  - you forgot to run / boot your web server
+                  - your web server isn't accessible
+                  - you have weird network configuration settings on your computer
+                    at &lt;unknown> (http://localhost:54917/__cypress/runner/cypress_runner.js:131491:74)
+                    at visitFailedByErr (http://localhost:54917/__cypress/runner/cypress_runner.js:130889:12)
+                    at &lt;unknown> (http://localhost:54917/__cypress/runner/cypress_runner.js:131490:11)
+                    at tryCatcher (http://localhost:54917/__cypress/runner/cypress_runner.js:1807:23)
+                    at Promise._settlePromiseFromHandler (http://localhost:54917/__cypress/runner/cypress_runner.js:1519:31)
+                    at Promise._settlePromise (http://localhost:54917/__cypress/runner/cypress_runner.js:1576:18)
+                    at Promise._settlePromise0 (http://localhost:54917/__cypress/runner/cypress_runner.js:1621:10)
+                    at Promise._settlePromises (http://localhost:54917/__cypress/runner/cypress_runner.js:1697:18)
+                    at _drainQueueStep (http://localhost:54917/__cypress/runner/cypress_runner.js:2407:12)
+                    at _drainQueue (http://localhost:54917/__cypress/runner/cypress_runner.js:2400:9)
+                    at Async._drainQueues (http://localhost:54917/__cypress/runner/cypress_runner.js:2416:5)
+                    at Async.drainQueues (http://localhost:54917/__cypress/runner/cypress_runner.js:2286:14)
+                From Your Spec Code:
+                    at Context.eval (webpack://provider-credentialing/./cypress/e2e/TestCases/DataPortal/ProviderDataPortal.cy.js:186:7)
+                
+                From Node.js Internals:
+                  Error: connect ETIMEDOUT 52.191.237.70:443
+                      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
